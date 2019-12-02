@@ -53,7 +53,7 @@ public class JLang {
     }
 
     static void error(int line, String message){
-        report(line, ", ", message);
+        report(line, "", message);
     }
 
     /**
@@ -64,7 +64,7 @@ public class JLang {
      * @param where    - The entity name for example - function name
      * @param message  - Issue
      */
-    private static void report(String line, String where, String message){
+    private static void report(int line, String where, String message){
         System.err.println(
                 "[Line "+line + "] Error"+ where + ": "+ message
         );
